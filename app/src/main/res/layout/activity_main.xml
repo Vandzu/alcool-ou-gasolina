@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87C4CB"
+    android:backgroundTint="#87C4CB"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/rounded_layout"
+        android:backgroundTint="?android:backgroundTint"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="221dp"
+            android:layout_height="162dp"
+            android:contentDescription="uma bomba de gasolina ilustrando o app"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/titulo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@mipmap/gas_or_alc_foreground"
+            tools:layout_conversion_absoluteHeight="128dp"
+            tools:layout_conversion_absoluteWidth="300dp" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:rotation="0"
+            android:rotationX="0"
+            android:rotationY="0"
+            android:text="Gasolina ou Álcool?"
+            android:textAlignment="center"
+            android:textColor="#87C4CB"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/edAlcool"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:layout_conversion_absoluteHeight="34dp"
+            tools:layout_conversion_absoluteWidth="222dp" />
+
+        <EditText
+            android:id="@+id/edAlcool"
+            android:layout_width="221dp"
+            android:layout_height="51dp"
+            android:backgroundTint="#122FBF"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Preço do álcool"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/edGasolina"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo"
+            tools:layout_conversion_absoluteHeight="45dp"
+            tools:layout_conversion_absoluteWidth="240dp" />
+
+        <EditText
+            android:id="@+id/edGasolina"
+            android:layout_width="221dp"
+            android:layout_height="48dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#4CAF50"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Preço da gasolina"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/swPercentual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edAlcool"
+            tools:layout_conversion_absoluteHeight="45dp"
+            tools:layout_conversion_absoluteWidth="300dp" />
+
+        <Switch
+            android:id="@+id/swPercentual"
+            android:layout_width="97dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="75%"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edGasolina"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="73dp" />
+
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#CB584C"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Calcular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swPercentual"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="112dp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toTopOf="@+id/btCalcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swPercentual" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
