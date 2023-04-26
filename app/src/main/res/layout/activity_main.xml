@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#87C4CB"
-    android:backgroundTint="#87C4CB"
+    style="@style/Theme.AlcoolOuGasolina"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
+        style="@style/Theme.AlcoolOuGasolina"
         android:layout_width="300dp"
         android:layout_height="550dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
         android:background="@drawable/rounded_layout"
-        android:backgroundTint="?android:backgroundTint"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#CB584C"
+            android:backgroundTint="#021BF1"
             android:fontFamily="@font/poppins_bold"
             android:text="Calcular"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -129,6 +128,7 @@
 
         <TextView
             android:id="@+id/resultText"
+            style="@style/Theme.AlcoolOuGasolina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
