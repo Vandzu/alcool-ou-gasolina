@@ -32,22 +32,23 @@ class MainActivity : AppCompatActivity() {
             val inputGasolina = findViewById<EditText>(R.id.edGasolina).text.toString()
             val resultText = findViewById<TextView>(R.id.resultText)
             var resultCalc = 0.0
+
             if (inputGasolina.isNotEmpty() && inputAlcool.isNotEmpty()) {
                 resultCalc = inputAlcool.toDouble() / inputGasolina.toDouble()
-            }
 
-            if (resultCalc == 0.0) {
-                if (inputAlcool.isEmpty()) {
-                    resultText.setText("Digite o valor do álcool")
+                if (inputGasolina.toInt() == 0 || inputAlcool.toInt() == 0) {
+                    resultText.setText("O valor do álcool ou gasolina não pode ser igual a 0")
                 } else {
-                    resultText.setText("Digite o valor da gasolina")
+                        if (resultCalc < percentual) {
+                            resultText.setText("É melhor utilizar o álcool")
+                        } else {
+                            resultText.setText("É melhor utilizar a gasolina")
+                        }
                 }
+            } else if (inputAlcool.isEmpty()) {
+                resultText.setText("Digite o valor do álcool")
             } else {
-                if (resultCalc < percentual) {
-                    resultText.setText("É melhor utilizar o álcool")
-                } else {
-                    resultText.setText("É melhor utilizar a gasolina")
-                }
+                resultText.setText("Digite o valor da gasolina")
             }
         })
 

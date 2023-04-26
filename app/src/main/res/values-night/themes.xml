@@ -20,4 +20,7 @@
         <item name="android:backgroundTint">#0D1223</item>
         <item name="android:background">#0D1223</item>
     </style>
+    <style name="MyTextViewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">#FFD400</item>
+    </style>
 </resources>

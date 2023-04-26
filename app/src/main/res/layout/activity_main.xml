@@ -39,6 +39,7 @@
 
         <TextView
             android:id="@+id/titulo"
+            style="@style/MyTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="9dp"
@@ -47,7 +48,6 @@
             android:rotationY="0"
             android:text="Gasolina ou Álcool?"
             android:textAlignment="center"
-            android:textColor="#87C4CB"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/edAlcool"
