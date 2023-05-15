@@ -19,6 +19,8 @@
         <item name="android:textColorHint">#FFFFFF</item>
         <item name="android:backgroundTint">#0D1223</item>
         <item name="android:background">#0D1223</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
     <style name="MyTextViewStyle" parent="Widget.MaterialComponents.TextView">
         <item name="android:textColor">#FFD400</item>
