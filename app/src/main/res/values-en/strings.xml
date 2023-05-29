@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">With what fuel?</string>
+    <string name="alcoholPrice">Alcohol price</string>
+    <string name="gasolinePrice">Gasoline price</string>
+    <string name="calc">Calculate</string>
+</resources>
